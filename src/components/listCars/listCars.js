@@ -1,7 +1,7 @@
 import $ from 'jquery'
 import './listCars.sass'
-import { view } from '../../environment/view.js'
 import html from './listCars.html'
+import { view } from '../../environment/view.js'
 import Mustache from 'mustache'
 
 export default class listCars {
