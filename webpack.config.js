@@ -7,7 +7,8 @@ module.exports = {
     filename: 'index.js',
     path: path.resolve(__dirname, 'dist'),
   },
-  mode: 'production',
+  mode: 'development',
+  // mode: 'production',
   module: {
     rules: [
       {
