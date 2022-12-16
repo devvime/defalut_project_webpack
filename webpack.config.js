@@ -2,11 +2,12 @@ const path = require('path');
 
 module.exports = {
   entry: './src/index.js',
+  devtool: "source-map",
   output: {
     filename: 'index.js',
     path: path.resolve(__dirname, 'dist'),
   },
-  mode: 'development',
+  mode: 'production',
   module: {
     rules: [
       {
@@ -36,5 +37,8 @@ module.exports = {
     compress: true,
     port: 5050,
     open: true,
+    historyApiFallback: {
+      index: 'index.html'
+    }
   },
 };
