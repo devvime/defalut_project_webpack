@@ -1,8 +1,6 @@
-import $ from 'jquery'
+import { app } from '../../environment/app'
 import './listCars.sass'
 import html from './listCars.html'
-import { view } from '../../environment/view.js'
-import Mustache from 'mustache'
 
 export default class listCars {
 
@@ -10,10 +8,9 @@ export default class listCars {
     this.init()
   }
 
-  async init() {
-    $('#content').html('')
-    await this.getCars()
-    await this.render()
+  init() {
+    this.getCars()
+    this.render()
   }
 
   getCars() {
@@ -33,13 +30,17 @@ export default class listCars {
           Model: 'Corsa Classic',
           Color: 'Cinza',
           Engine: '1.0 8v'
+        },
+        {
+          Model: 'Margareth Hath',
+          Color: 'Cinza',
+          Engine: '1.0 8v Fire'
         }
       ]
     }
   }
 
   render() {
-    const rendered = Mustache.render(html, this.carsData)
-    $('#content').append(view(rendered))
+    app.draw('content', html, this.carsData)
   }
 }

@@ -1,11 +1,11 @@
-import route from 'page'
+import { app } from "./environment/app";
 import Nav from './components/nav/nav.js'
 import Home from './components/home/home.js'
 import listCars from './components/listCars/listCars.js'
 
-new Nav()
+app.render(Nav)
 
-route('/', () => new Home)
-route('/cars', () => new listCars)
+app.route('/', Home)
+app.route('/cars', listCars)
 
-route()
+app.run()

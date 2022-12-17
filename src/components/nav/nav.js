@@ -1,8 +1,6 @@
-import $ from 'jquery'
+import { app } from '../../environment/app'
 import './nav.sass'
 import html from './nav.html'
-import { view } from '../../environment/view.js'
-import Mustache from 'mustache'
 
 export default class Nav {
 
@@ -10,12 +8,11 @@ export default class Nav {
     this.init()
   }
 
-  async init() {
-    await this.render()
+  init() {
+    this.render()
   }
 
   render() {
-    const rendered = Mustache.render(html)
-    $('#header').append(view(rendered))
+    app.draw('header', html)
   }
 }

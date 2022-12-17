@@ -1,8 +1,6 @@
-import $ from 'jquery'
+import { app } from '../../environment/app'
 import './home.sass'
 import html from './home.html'
-import { view } from '../../environment/view.js'
-import Mustache from 'mustache'
 
 export default class Home {
 
@@ -10,13 +8,11 @@ export default class Home {
     this.init()
   }
 
-  async init() {
-    $('#content').html('')
-    await this.render()
+  init() {
+    this.render()
   }
 
   render() {
-    const rendered = Mustache.render(html)
-    $('#content').append(view(rendered))
+    app.draw('content', html)
   }
 }
