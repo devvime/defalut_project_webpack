@@ -11,6 +11,7 @@ export default class listCars {
   }
 
   async init() {
+    $('#content').html('')
     await this.getCars()
     await this.render()
   }
