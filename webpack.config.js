@@ -20,16 +20,16 @@ module.exports = {
           presets: ['@babel/preset-env']
         }
       }
-    },
-    {
-      use: ["style-loader", "css-loader", "sass-loader"],
-      test: /.(css|sass|scss)$/,
-    },
-    {
-      use: ["html-loader"],
-      test: /\.html$/i,
-    },
-  ]
+      },
+      {
+        use: ["style-loader", "css-loader", "sass-loader"],
+        test: /.(css|sass|scss)$/,
+      },
+      {
+        use: ["html-loader"],
+        test: /\.html$/i,
+      },
+    ]
   },
   devServer: {
     static: {

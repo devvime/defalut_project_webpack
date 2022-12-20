@@ -1,4 +1,4 @@
-import { app } from '../../environment/app'
+import { runtrax } from 'runtrax'
 import './home.sass'
 import html from './home.html'
 
@@ -13,6 +13,6 @@ export default class Home {
   }
 
   render() {
-    app.draw('content', html)
+    runtrax.draw('#content', html)
   }
 }

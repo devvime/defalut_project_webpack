@@ -28,6 +28,7 @@
     "lodash": "^4.17.21",
     "mustache": "^4.2.0",
     "page": "^1.11.6",
-    "regenerator-runtime": "^0.13.9"
+    "regenerator-runtime": "^0.13.9",
+    "runtrax": "^1.0.1"
   }
 }

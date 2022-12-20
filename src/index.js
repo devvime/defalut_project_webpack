@@ -1,11 +1,11 @@
-import { app } from "./environment/app";
+import { runtrax } from 'runtrax'
 import Nav from './components/nav/nav.js'
 import Home from './components/home/home.js'
 import listCars from './components/listCars/listCars.js'
 
-app.render(Nav)
+runtrax.render(Nav)
 
-app.route('/', Home)
-app.route('/cars', listCars)
+runtrax.route('/', Home)
+runtrax.route('/cars', listCars)
 
-app.run()
+runtrax.run()

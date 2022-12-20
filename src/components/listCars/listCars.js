@@ -1,4 +1,4 @@
-import { app } from '../../environment/app'
+import { runtrax } from 'runtrax'
 import './listCars.sass'
 import html from './listCars.html'
 
@@ -41,6 +41,6 @@ export default class listCars {
   }
 
   render() {
-    app.draw('content', html, this.carsData)
+    runtrax.draw('#content', html, this.carsData)
   }
 }

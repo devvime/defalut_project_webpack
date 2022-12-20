@@ -1,4 +1,4 @@
-import { app } from '../../environment/app'
+import { runtrax } from 'runtrax'
 import './nav.sass'
 import html from './nav.html'
 
@@ -13,6 +13,6 @@ export default class Nav {
   }
 
   render() {
-    app.draw('header', html)
+    runtrax.draw('#header', html)
   }
 }
