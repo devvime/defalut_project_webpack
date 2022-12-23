@@ -1,4 +1,4 @@
-import { runtrax } from 'runtrax'
+import { blots } from 'blots'
 import './pageNotFoundComponent.sass'
 import html from './pageNotFoundComponent.html'
 
@@ -13,6 +13,6 @@ export default class pageNotFoundComponent {
     }
 
     render() {
-        runtrax.draw('#content', html)
+        blots.draw('#content', html)
     }
 }

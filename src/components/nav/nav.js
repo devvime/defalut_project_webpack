@@ -1,4 +1,4 @@
-import { runtrax } from 'runtrax'
+import { blots } from 'blots'
 import './nav.sass'
 import html from './nav.html'
 
@@ -13,6 +13,6 @@ export default class Nav {
   }
 
   render() {
-    runtrax.draw('#header', html)
+    blots.draw('#header', html)
   }
 }
