@@ -2,6 +2,7 @@ import { blots } from 'blots'
 import Mustache from 'mustache'
 import $ from 'jquery'
 import './home.sass'
+import logo from '../../images/raven.png'
 import html from './home.html'
 import drop from './drops.html'
 
@@ -40,6 +41,6 @@ export default class Home {
   }
 
   render() {
-    blots.draw('#content', html)
+    blots.draw('#content', html, {logo})
   }
 }
