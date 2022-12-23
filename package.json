@@ -26,7 +26,7 @@
     "webpack-dev-server": "^4.9.1"
   },
   "dependencies": {
-    "blots": "^1.0.2",
+    "blots": "^1.0.5",
     "bootstrap": "^5.2.3",
     "jquery": "^3.6.2",
     "lodash": "^4.17.21",
