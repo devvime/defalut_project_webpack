@@ -18,7 +18,7 @@ export default class Home {
   }
 
   rain() {
-    $('.rain').empty()    
+    $('.rain').empty()
     let increment = 0
     let drops = ""
     let backDrops = ""    

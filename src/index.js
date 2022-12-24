@@ -1,5 +1,4 @@
 
-import '../node_modules/bootstrap/dist/js/bootstrap'
 import './components/default/theme/theme.sass'
 import { blots } from 'blots'
 import Home from './components/home/home.js'
