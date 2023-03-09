@@ -4,7 +4,8 @@
   "description": "",
   "scripts": {
     "start": "webpack serve",
-    "build": "webpack"
+    "build": "webpack",
+    "blots": "node node_modules/blots-generator/index.js"
   },
   "author": "devvime",
   "license": "MIT",
@@ -27,6 +28,7 @@
   },
   "dependencies": {
     "blots": "^1.0.7",
+    "blots-generator": "^1.0.2",
     "bootstrap": "^5.2.3",
     "jquery": "^3.6.2",
     "lodash": "^4.17.21",
