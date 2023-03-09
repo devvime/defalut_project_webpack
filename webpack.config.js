@@ -1,5 +1,4 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const MinifyPlugin = require('babel-minify-webpack-plugin');  
 const path = require('path');
 
 module.exports = {
@@ -46,9 +45,6 @@ module.exports = {
         collapseWhitespace: true
       },
       hash: true
-    }),
-    new MinifyPlugin({}, {
-      comments: false
     })
   ],
   devServer: {
