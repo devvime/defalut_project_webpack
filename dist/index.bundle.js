@@ -14307,8 +14307,12 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-blots__WEBPACK_IMPORTED_MODULE_1__.blots.route('/', _components_home_home_js__WEBPACK_IMPORTED_MODULE_2__["default"]);
-blots__WEBPACK_IMPORTED_MODULE_1__.blots.route('*', _components_default_pageNotFound_pageNotFoundComponent_js__WEBPACK_IMPORTED_MODULE_3__["default"]);
+blots__WEBPACK_IMPORTED_MODULE_1__.blots.route('/', function () {
+  return new _components_home_home_js__WEBPACK_IMPORTED_MODULE_2__["default"]();
+});
+blots__WEBPACK_IMPORTED_MODULE_1__.blots.route('*', function () {
+  return new _components_default_pageNotFound_pageNotFoundComponent_js__WEBPACK_IMPORTED_MODULE_3__["default"]();
+});
 blots__WEBPACK_IMPORTED_MODULE_1__.blots.start();
 })();
 
