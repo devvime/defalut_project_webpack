@@ -2,17 +2,15 @@ import { blots } from 'blots'
 import './pageNotFoundComponent.sass'
 import html from './pageNotFoundComponent.html'
 
-export default class pageNotFoundComponent {
+const strict = blots.createObservable()
 
-    constructor() {
-        this.init()
-    }
-
-    init() {
-        this.render()
-    }
-
-    render() {
-        blots.draw('#content', html)
-    }
+export const PageNotFound = {
+  component() {
+    blots.draw('#content', html)
+  },
+  actions() {
+    // functions
+  }
 }
+
+strict.subscribe(PageNotFound.component)

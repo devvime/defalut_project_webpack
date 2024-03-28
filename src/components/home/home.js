@@ -6,17 +6,19 @@ import logo from '../../images/raven.png'
 import html from './home.html'
 import drop from './drops.html'
 
-export default class Home {
+const strict = blots.createObservable()
 
-  constructor() {
-    this.init()
-  }
-
-  init() {
-    this.render()
-    this.rain()
-  }
-
+export const Home = {
+  strict: {
+    logo
+  },
+  component() {
+    blots.draw('#content', html, Home.strict)
+    Home.actions()
+  },
+  actions() {
+    Home.rain()
+  },
   rain() {
     $('.rain').empty()
     let increment = 0
@@ -26,21 +28,17 @@ export default class Home {
       let randoHundo = (Math.floor(Math.random() * (98 - 1 + 1) + 1))
       let randoFiver = (Math.floor(Math.random() * (5 - 2 + 1) + 2))
       increment += randoFiver
-
       const values = {
         increment,
         randoFiver: (randoFiver + randoFiver - 1 + 100),
         randoHundo
       }
-
       drops += Mustache.render(drop, {...values, direction: 'left'})
       backDrops += Mustache.render(drop, {...values, direction: 'right'})
     }        
     $('.rain.front-row').append(drops)
     $('.rain.back-row').append(backDrops)
   }
-
-  render() {
-    blots.draw('#content', html, {logo})
-  }
 }
+
+strict.subscribe(Home.component)

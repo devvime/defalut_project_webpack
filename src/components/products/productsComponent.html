@@ -1,0 +1,28 @@
+<section class="pt-2">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-10 offset-md-1">
+        <h3>Products</h3>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-5 offset-md-1">
+        <form id="add-product">
+          <input type="text" name="title" placeholder="Product title..." required class="form-control mb-2">
+          <input type="number" name="price" placeholder="Product price..." required class="form-control mb-2">
+          <button type="button" class="btn btn-primary mb-2" add-product>Add</button>
+        </form>
+      </div>
+      <div class="col-md-5">
+        {{#products}}
+        <div class="card mb-2">
+          <div class="card-body">
+            <h3 class="card-title">{{ title }}</h3>
+            <p class="card-text">R$: {{ price }}</p>
+          </div>
+        </div>
+        {{/products}}
+      </div>
+    </div>
+  </div>
+</section>
