@@ -1,6 +1,6 @@
 import { blots, click } from 'blots'
-import './productsComponent.sass'
-import html from './productsComponent.html'
+import './products-element.sass'
+import element from './products-element.html'
 
 const strict = blots.createObservable()
 
@@ -14,7 +14,7 @@ export const Products = {
     ]
   },
   component() {
-    blots.draw('#content', html, Products.strict)
+    blots.draw('#content', element, Products.strict)
     Products.actions()
   },
   actions() {

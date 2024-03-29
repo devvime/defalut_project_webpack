@@ -1,10 +1,10 @@
 import { blots } from 'blots'
 import Mustache from 'mustache'
 import $ from 'jquery'
-import './home.sass'
+import './home-element.sass'
 import logo from '../../images/raven.png'
-import html from './home.html'
-import drop from './drops.html'
+import element from './home-element.html'
+import drop from './drops-element.html'
 
 const strict = blots.createObservable()
 
@@ -13,7 +13,7 @@ export const Home = {
     logo
   },
   component() {
-    blots.draw('#content', html, Home.strict)
+    blots.draw('#content', element, Home.strict)
     Home.actions()
   },
   actions() {

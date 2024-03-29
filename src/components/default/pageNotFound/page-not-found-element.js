@@ -1,12 +1,13 @@
 import { blots } from 'blots'
-import './pageNotFoundComponent.sass'
-import html from './pageNotFoundComponent.html'
+import './page-not-found-element.sass'
+import element from './page-not-found-element.html'
 
 const strict = blots.createObservable()
 
 export const PageNotFound = {
   component() {
-    blots.draw('#content', html)
+    blots.draw('#content', element)
+    PageNotFound.actions()
   },
   actions() {
     // functions
