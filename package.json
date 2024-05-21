@@ -28,7 +28,7 @@
     "blots-generator": "^1.0.5"
   },
   "dependencies": {
-    "blots": "^1.1.2",    
+    "blots": "^1.1.3",    
     "bootstrap": "^5.2.3",
     "jquery": "^3.6.2",
     "lodash": "^4.17.21",
